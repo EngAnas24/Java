@@ -1,0 +1,52 @@
+
+                /*cmnd = new SqlCommand("insert into Product values (@Poduct_Id,@ProductName,@Quantity,@Price,@PurchasePrice,@Details)", Con);
+              
+                cmnd.Parameters.AddWithValue("@Poduct_Id", prodId.Text);
+                cmnd.Parameters.AddWithValue("@ProductName", NameTxt.Text);
+                cmnd.Parameters.AddWithValue("@Quantity", QuenTxt.Text);
+                cmnd.Parameters.AddWithValue("@Price", PriceTxt.Text);
+                cmnd.Parameters.AddWithValue("@PurchasePrice", PurchasePriceTxt.Text);
+                cmnd.Parameters.AddWithValue("@Details", Detailstxt.Text);
+            cmnd.Parameters.AddWithValue("@date", Date1.Value.ToString("yyyy/MM/dd 00:00:00"));
+            cmnd.Parameters.AddWithValue("@suplliers", Supply.Text);
+            cmnd.Parameters.AddWithValue("@catagori", CatCB.SelectedValue.ToString());*/
+
+            cmnd.ExecuteNonQuery();
+                MessageBox.Show("deleted successfuly");
+                /*Con.Close();
+                DisPlay();
+                Clear();*/
+______--_____________________________________________________________
+/*cmnd = new SqlCommand(insert into Product values ('" + prodId.Text + "','" + NameTxt.Text + "','" + QuenTxt.Text + "','" + PurchasePriceTxt.Text + "','" + PriceTxt.Text + "','" + Detailstxt.Text + , "+ Date1.Value.ToString("yyyy / MM / dd 00:00:00")+", '"+ Suppliers.Text + "', '"+ CatCB.Text + "')", Con);*/
+            string 
+                   cmnd.ExecuteNonQuery();
+            MessageBox.Show("verileri başaralı kayd edilmış");
+            Con.Close();
+            /*DisPlay();
+            Clear();*/
+            
+                
+      
+
+          
+        }
+        public void DisPlay()
+        {
+            Con.Open();
+            DataTable dt = new DataTable();
+            adpt = new SqlDataAdapter("select * from Product ", Con);
+            adpt.Fill(dt);
+            productdv2.DataSource = dt;
+            Con.Close();
+        }
+        public void Clear()
+        {
+            prodId.Text = "";
+            NameTxt.Text = "";
+            QuenTxt.Text = "";
+            PriceTxt.Text = "";
+            PurchasePriceTxt.Text = "";
+            Detailstxt.Text = "";
+            Supply.Text = "";
+        }
+

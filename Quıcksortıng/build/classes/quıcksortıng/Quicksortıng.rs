@@ -1,0 +1,2 @@
+quicksortıng.Quicksortıng
+quıcksortıng.Quıcksortıng
