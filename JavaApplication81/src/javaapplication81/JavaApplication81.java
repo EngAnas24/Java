@@ -3,14 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ball_game;
+package javaapplication81;
 
 /**
  *
  * @author dell
  */
-public class Main {
+public class JavaApplication81 {
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        GameFrame gameFrame = new GameFrame();
+        // TODO code application logic here
+        int x= 46,y=40;
+        System.out.println(x<y);
     }
+    
 }

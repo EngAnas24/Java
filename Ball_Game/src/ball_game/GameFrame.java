@@ -48,6 +48,7 @@ public class GameFrame extends JFrame implements KeyListener, ActionListener {
 
     }
     
+    @Override
     public void paint(Graphics ball){
         ball.fillOval(x,y, 20, 20);
      }
